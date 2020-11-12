@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title id="title">
+    	Elliot is Fine
+  	</title>
+  	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body id="main">
+	<div id="theme-button" onclick="myFunction()">Toggle Theme</div>
+  	<h1>
+    	Elliot Danby
+  	</h1>
+	<p id="sub">
+		Aspiring Front End Developer
+	</p>
+  	<div id="info">
+    	<p>
+			My name is Elliot. I'm a mathematics and computer science graduate, and I'd love to be a front end web developer.
+		</p>
+		<p>
+			I genuinely love web development, and I would love to learn as much as I can in a professional, high energy and collaborative work enviromnent.
+		</p>
+	  </div>
+	<h2>
+		Languages
+	</h2>
+	<p class="skillsSub">
+		Click for specifics
+	</p>
+	<div class="skills">
+		<p class="skill" href="javascript: void(0);" onClick="toggle('html')">
+			HTML + CSS
+		</p>
+		<p class="skill">
+			JavaScript
+		</p>
+		<p class="skill">
+			Java
+		</p>
+		<p class="skill">
+			Python
+		</p>
+		<p class="skill">
+			C
+		</p>
+	</div>
+	<div id="html">
+		<p>
+			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+		</p>
+	</div>
+	<h2>
+		Skills
+	</h2>
+	<p class="skillsSub">
+		Click for specifics
+	</p>
+	<div class="skills">
+		<p class="skill">
+			MySQL
+		</p>
+		<p class="skill">
+			Git
+		</p>
+		<p class="skill">
+			Adobe
+		</p>
+	</div>
+	<h2>
+		Education
+	</h2>
+	<div class="education">
+		<p class="date">
+			Oct 18 - Sep 19
+		</p>
+		<div>
+			<p>
+				<a class="uni" href="https://www.bath.ac.uk/corporate-information/rankings-and-reputation/" target="_blank">The University of Bath</a> | MSc Computer Science
+			</p>
+			<p>
+				Modules Include: Software Engineering, Databases, Interactive Communication Design, Functional Programming
+			</p>
+		</div>
+		<p>
+			Sep 15 - Jun 18
+		</p>
+		<div>
+			<p>
+				<a class="uni" href="https://www1.chester.ac.uk/about/the-university" target="_blank">The University of Chester</a> | BSc Mathematics, 1<sup>st</sup>
+			</p>
+			<p>
+				Modules Include: Linear Algebra, Quality Control, Group Theory, Linear Programming, Statistical Methods, Applied Calculus
+			</p>
+		</div>
+	</div>
+	<footer>
+		<strong>Thank you, so much, for taking a look at my site.</strong>
+		<p>
+			<a id="email" href="mailto:e.danby@outlook.com">click to send me an email</a>
+		</p>
+	</footer>
+
+	<script>
+		function myFunction() {
+   			document.body.classList.toggle("light-theme");
+		}
+
+		function toggle(obj) {
+          var obj=document.getElementById(obj);
+          if (obj.style.display == "block") obj.style.display = "none";
+          else obj.style.display = "block";
+		}
+	</script>
+</body>
+</html>

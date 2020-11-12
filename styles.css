@@ -1,0 +1,135 @@
+.light-theme {
+	--colour-background: white;
+	--colour-secondary: #f0f0f0;
+	--colour-highlight: #0095ff;
+	--colour-shadow: #e0e0e0;
+	--font-colour: #363636;
+}
+
+body {
+	--colour-background: #383838;
+	--colour-secondary: #3d3d3d;
+	--colour-highlight: #ff6714;
+	--colour-shadow: #242424;
+	--font-colour: #fafafa;
+	font-family: Helvetica Neue, Arial;
+	line-height: 20px;
+	text-align: center;
+	margin: 0 40px 0 40px;
+	color: var(--font-colour);
+	background-color: var(--colour-background);
+}
+
+#theme-button {
+	position: fixed;
+	top: 30px;
+	right: 30px;
+	background-color: var(--colour-secondary);
+	box-shadow: 2px 2px 4px var(--colour-shadow);
+	padding: 10px;
+	border-radius: 10px;
+	transition: 0.3s;
+}
+
+#theme-button:hover {
+	color: var(--colour-highlight);
+	box-shadow: 0px 2px 4px var(--colour-shadow);
+}
+
+h1 {
+	font-size: 38px;
+	padding: 10px 0px 0px 0px;
+	text-shadow: 0px 4px 4px var(--colour-shadow);
+}
+
+h2 {
+	font-size: 22px;
+	padding-top: 10px;
+}
+
+a {
+	text-decoration: none;
+}
+
+#sub {
+  	font-size: 14px;
+  	font-style: italic;
+}
+
+#info {
+	margin: auto;
+	max-width: 600px;
+}
+
+li {
+	text-align: left;
+	padding: 10px;
+}
+
+.skillsSub {
+	font-size: 13px;
+	font-style: italic;
+	margin-top: -10px;
+}
+
+.skills {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin: 20px auto 30px auto;
+	max-width: 700px;
+}
+
+.skill {
+	background-color: var(--colour-secondary);
+	color: var(--font-colour);
+	width: 120px;
+	padding: 5px;
+	border-radius: 10px;
+	font-weight: bold;
+	transition: 0.3s;
+	margin: 0 auto 10px auto;
+}
+
+.skill:hover {
+	width: 130px;
+	color: var(--colour-highlight);
+	box-shadow: 0px 2px 4px var(--colour-shadow);
+}
+
+#html {
+	display: none;
+	transition: 0.3s;
+}
+
+.education {
+	text-align: left;
+	margin: auto;
+	max-width: 600px;
+	grid-template-columns: 25% 75%;
+	display: grid;
+}
+
+.uni {
+	font-weight: bold;
+	color: var(--font-colour);
+	transition: 0.3s;
+}
+
+.uni:hover {
+	color: var(--colour-highlight);
+	text-shadow: 0px 2px 4px var(--colour-shadow);
+}
+
+sup {
+	font-size: 10px;
+}
+
+footer {
+	font-style: bold;
+	margin: 40px auto 60px auto;
+}
+
+#email {
+	color: var(--colour-highlight);
+}
