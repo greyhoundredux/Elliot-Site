@@ -4,16 +4,19 @@
 	<title id="title">
     	Elliot is Fine
   	</title>
-  	<link rel="stylesheet" type="text/css" href="styles.css">
+	  <link rel="stylesheet" type="text/css" href="styles.css">
+	  <script src="script.js"></script>
 </head>
 <body id="main">
-	<div id="theme-button" onclick="myFunction()">Toggle Theme</div>
-  	<h1>
-    	Elliot Danby
-  	</h1>
-	<p id="sub">
-		Aspiring Front End Developer
-	</p>
+	<div id="theme-button" onclick="themeSwitcher()">Toggle Theme</div>
+	<header>
+		<h1>
+    		Elliot Danby
+  		</h1>
+		<p id="sub">
+			Aspiring Front End Developer
+		</p>
+	</header>
   	<div id="info">
     	<p>
 			My name is Elliot. I'm a mathematics and computer science graduate, and I'd love to be a front end web developer.
@@ -26,35 +29,58 @@
 		Languages
 	</h2>
 	<p class="skillsSub">
-		Click for specifics
+		Click for details
 	</p>
 	<div class="skills">
-		<p class="skill" href="javascript: void(0);" onClick="toggle('html')">
+		<p class="skill" onClick="toggle('html')">
 			HTML + CSS
 		</p>
-		<p class="skill">
+		<p class="skill" onClick="toggle('javascript')">
 			JavaScript
 		</p>
-		<p class="skill">
+		<p class="skill" onClick="toggle('java')">
 			Java
 		</p>
-		<p class="skill">
+		<p class="skill" onClick="toggle('python')">
 			Python
 		</p>
-		<p class="skill">
+		<p class="skill" onClick="toggle('c')">
 			C
 		</p>
 	</div>
-	<div id="html">
+	<div id="html" class="skill-descriptor" style="display: none;">
 		<p>
-			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+			I'm entirely self-taught in HTML and CSS. I decided one day to create a website for myself, and after playing around and seeing what simple HTML and CSS was capable of, I became hooked. I love finding new and exciting functionality, and I'd love to learn more and refine my skills in a professional environment.
 		</p>
 	</div>
+	<div id="javascript" class="skill-descriptor" style="display: none;">
+		<p>
+			After learning the basics of HTML, I quickly learned that in order to create websites with more functionality, I'd need to look into JavaScript. I love how meta JavaScript feels, and how there is infinite possibilities for cool features.
+		</p>
+	</div>
+	<div id="java" class="skill-descriptor" style="display: none;">
+		<p>
+			Coding in Java made up the main body of my Software Engineering module whilst studying Computer Science at Bath Uni. We were tasked with creating a game using Java, which we did successfully and acheived a high merit grade.
+		</p>
+	</div>
+	<div id="python" class="skill-descriptor" style="display: none;">
+		<p>
+			I've used Python at Bath Uni during the Artificial Intelligence module. It was used to write scripts for problem solving, for example I've written one script that solves a sudoku, and another demonstrating the Naive Bayes Classifier.
+		</p>
+	</div>
+	<div id="c" class="skill-descriptor" style="display: none;">
+		<p>
+			I was taught C as my first programming language at Bath Uni. We used it to cover the initial Principles of Programming module, as it makes for a nice entry level language. Again, I achieved a merit in this module.
+		</p>
+	</div>
+	<p id="language-line">
+		and I'm 100% looking to learn more.
+	</p>
 	<h2>
 		Skills
 	</h2>
 	<p class="skillsSub">
-		Click for specifics
+		Click for details
 	</p>
 	<div class="skills">
 		<p class="skill">
@@ -67,50 +93,40 @@
 			Adobe
 		</p>
 	</div>
-	<h2>
-		Education
-	</h2>
-	<div class="education">
-		<p class="date">
-			Oct 18 - Sep 19
-		</p>
-		<div>
-			<p>
-				<a class="uni" href="https://www.bath.ac.uk/corporate-information/rankings-and-reputation/" target="_blank">The University of Bath</a> | MSc Computer Science
+	<div id="education">
+		<h2>
+			Education
+		</h2>
+		<div class="education-table">
+			<p class="date">
+				Oct 18 - Sep 19
 			</p>
+			<div>
+				<p>
+					<a class="uni" href="https://www.bath.ac.uk/corporate-information/rankings-and-reputation/" target="_blank">The University of Bath</a> | MSc Computer Science
+				</p>
+				<p>
+					Modules Include: Software Engineering, Databases, Interactive Communication Design, Functional Programming
+				</p>
+			</div>
 			<p>
-				Modules Include: Software Engineering, Databases, Interactive Communication Design, Functional Programming
+				Sep 15 - Jun 18
 			</p>
-		</div>
-		<p>
-			Sep 15 - Jun 18
-		</p>
-		<div>
-			<p>
-				<a class="uni" href="https://www1.chester.ac.uk/about/the-university" target="_blank">The University of Chester</a> | BSc Mathematics, 1<sup>st</sup>
-			</p>
-			<p>
-				Modules Include: Linear Algebra, Quality Control, Group Theory, Linear Programming, Statistical Methods, Applied Calculus
-			</p>
+			<div>
+				<p>
+					<a class="uni" href="https://www1.chester.ac.uk/about/the-university" target="_blank">The University of Chester</a> | BSc Mathematics, 1<sup>st</sup>
+				</p>
+				<p>
+					Modules Include: Linear Algebra, Quality Control, Group Theory, Linear Programming, Statistical Methods, Applied Calculus
+				</p>
+			</div>
 		</div>
 	</div>
 	<footer>
 		<strong>Thank you, so much, for taking a look at my site.</strong>
 		<p>
-			<a id="email" href="mailto:e.danby@outlook.com">click to send me an email</a>
+			<a id="email" href="mailto:e.danby@outlook.com">Click to send me an email!</a>
 		</p>
 	</footer>
-
-	<script>
-		function myFunction() {
-   			document.body.classList.toggle("light-theme");
-		}
-
-		function toggle(obj) {
-          var obj=document.getElementById(obj);
-          if (obj.style.display == "block") obj.style.display = "none";
-          else obj.style.display = "block";
-		}
-	</script>
 </body>
 </html>

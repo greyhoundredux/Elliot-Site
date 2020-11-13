@@ -1,6 +1,7 @@
 .light-theme {
 	--colour-background: white;
 	--colour-secondary: #f0f0f0;
+	--colour-tertiary: #fafafa;
 	--colour-highlight: #0095ff;
 	--colour-shadow: #e0e0e0;
 	--font-colour: #363636;
@@ -8,16 +9,25 @@
 
 body {
 	--colour-background: #383838;
-	--colour-secondary: #3d3d3d;
+	--colour-secondary: #474747;
+	--colour-tertiary: #3d3d3d;
 	--colour-highlight: #ff6714;
 	--colour-shadow: #242424;
 	--font-colour: #fafafa;
 	font-family: Helvetica Neue, Arial;
 	line-height: 20px;
 	text-align: center;
-	margin: 0 40px 0 40px;
+	margin: 0 40px;
 	color: var(--font-colour);
 	background-color: var(--colour-background);
+}
+
+header {
+	background-color: var(--colour-tertiary);
+	width: 100%;
+	margin: 0 -40px 30px -40px;
+	padding: 1px 40px 10px 40px;
+	justify-content: center;
 }
 
 #theme-button {
@@ -76,7 +86,7 @@ li {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
-	margin: 20px auto 30px auto;
+	margin: 20px auto 10px auto;
 	max-width: 700px;
 }
 
@@ -97,12 +107,28 @@ li {
 	box-shadow: 0px 2px 4px var(--colour-shadow);
 }
 
-#html {
-	display: none;
-	transition: 0.3s;
+.skill-descriptor {
+	background-color: var(--colour-secondary);
+	border-radius: 15px;
+	padding: 5px 35px;
+	max-width: 600px;
+	margin: auto;
 }
 
-.education {
+#language-line {
+	font-style: italic;
+	font-size: 14px;
+	color: var(--colour-highlight);
+	margin-top: 5px;
+}
+
+#education {
+	background-color: var(--colour-secondary);
+	margin: 0 -40px;
+	padding: 5px 0px;
+}
+
+.education-table {
 	text-align: left;
 	margin: auto;
 	max-width: 600px;
