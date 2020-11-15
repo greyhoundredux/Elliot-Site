@@ -1,15 +1,15 @@
 function themeSwitcher() {
-    document.body.classList.toggle("light-theme");
+    document.body.classList.toggle("dark-theme");
 }
 
-function toggle(obj) {
- var obj=document.getElementById(obj);
- if (obj.style.display == "block")
- obj.style.display = "none";
-   else {
-     obj.style.display = "block";
-     boxClose(obj);
- }
+function showDescription(obj) {
+    var obj=document.getElementById(obj);
+    if (obj.style.display == "block")
+    obj.style.display = "none";
+    else {
+        obj.style.display = "block";
+        boxClose(obj);
+    }
 }
 
 function boxClose(obj) {
