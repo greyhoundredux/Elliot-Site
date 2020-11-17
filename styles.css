@@ -3,6 +3,7 @@
 	--colour-secondary: #474747;
 	--colour-tertiary: #3d3d3d;
 	--colour-highlight: #ff6714;
+	--colour-highlight-alt: #6745ff;
 	--colour-shadow: #242424;
 	--colour-shadow-2: #242424;
 	--font-colour: #fafafa;
@@ -13,6 +14,7 @@ body {
 	--colour-secondary: #f0f0f0;
 	--colour-tertiary: #fafafa;
 	--colour-highlight: #0095ff;
+	--colour-highlight-alt: #ffc445;
 	--colour-shadow: #e0e0e0;
 	--colour-shadow-2: #adadad;
 	--font-colour: #363636;
@@ -22,6 +24,8 @@ body {
 	margin: 0 40px;
 	color: var(--font-colour);
 	background-color: var(--colour-background);
+	display: flex;
+	flex-direction: column;
 }
 
 header {
@@ -44,11 +48,10 @@ header {
 	padding: 10px;
 	border-radius: 10px;
 	transition: all 0.3s ease;
+	cursor: pointer;
 }
 
 #theme-button:hover {
-	-webkit-box-shadow: 0 0 10px var(--colour-highlight);
-    box-shadow: 0 0 10px var(--colour-highlight);
 	color: var(--colour-highlight);
 }
 
@@ -72,26 +75,46 @@ a {
   	font-style: italic;
 }
 
-#info {
-	margin: auto;
-	max-width: 600px;
+.columns {
+	display: flex;
 }
 
-li {
-	text-align: left;
-	padding: 10px;
+.left-column {
+	float: left;
+	width: 69%
+}
+
+.right-column {
+	float: right;
+	width: 30%;
 }
 
 .languages-card,
 .skills-card,
-.education-card {
-	margin: 40px auto 40px auto;
+.education-card,
+.info-card,
+.other-card {
+	margin: 10px;
 	padding: 20px;
 	max-width: 750px;
 	border-top: 6px var(--colour-highlight) solid;
 	border-radius: 10px;
 	-webkit-box-shadow: 0 0 10px var(--colour-shadow);
     box-shadow: 0 0 10px var(--colour-shadow);
+}
+
+.info-card,
+.other-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-top: 6px var(--colour-highlight-alt) solid;
+}
+
+.info-card img {
+	height: 150px;
+	width: 150px;
+	border-radius: 50%;
 }
 
 .skillsSub {
@@ -202,4 +225,21 @@ footer p {
 	border: 1px var(--colour-highlight) solid;
 	-webkit-box-shadow: 0 0 10px var(--colour-shadow);
     box-shadow: 0 0 10px var(--colour-shadow);
+}
+
+@media screen and (max-width: 940px) {
+	.columns {
+		flex-direction: column-reverse;
+	}
+	.left-column, .right-column {
+		width: 100%;
+	}
+	.info-card {
+		flex-direction: row;
+	}
+	.info-card img {
+		margin-right: 10px;
+	}
+	.other-card {
+	}
 }
