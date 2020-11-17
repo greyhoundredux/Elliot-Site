@@ -93,7 +93,8 @@ a {
 .skills-card,
 .education-card,
 .info-card,
-.other-card {
+.other-card,
+.other-card-2 {
 	margin: 10px;
 	padding: 20px;
 	max-width: 750px;
@@ -104,7 +105,8 @@ a {
 }
 
 .info-card,
-.other-card {
+.other-card,
+.other-card-2 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -115,6 +117,10 @@ a {
 	height: 150px;
 	width: 150px;
 	border-radius: 50%;
+}
+
+.other-card-2 {
+	display: none;
 }
 
 .skillsSub {
@@ -241,5 +247,9 @@ footer p {
 		margin-right: 10px;
 	}
 	.other-card {
+		display: none;
+	}
+	.other-card-2 {
+		display: block;
 	}
 }
