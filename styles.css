@@ -4,6 +4,7 @@
 	--colour-tertiary: #3d3d3d;
 	--colour-highlight: #ff6714;
 	--colour-highlight-alt: #6745ff;
+	--colour-maintenance: #7657ff;
 	--colour-shadow: #242424;
 	--colour-shadow-2: #242424;
 	--font-colour: #fafafa;
@@ -15,6 +16,7 @@ body {
 	--colour-tertiary: #fafafa;
 	--colour-highlight: #0095ff;
 	--colour-highlight-alt: #ffc445;
+	--colour-maintenance: #ffedc7;
 	--colour-shadow: #e0e0e0;
 	--colour-shadow-2: #adadad;
 	--font-colour: #363636;
@@ -75,6 +77,23 @@ a {
   	font-style: italic;
 }
 
+.maintenance {
+	background-color: var(--colour-maintenance);
+	border-top: 6px solid var(--colour-highlight-alt);
+	border-radius: 5px;
+	max-width: 700px;
+	margin: 20px auto;
+	padding: 20px;
+	-webkit-box-shadow: 0 0 10px var(--colour-shadow);
+	box-shadow: 0 0 10px var(--colour-shadow);
+	display: none;
+}
+
+.maintenance-title {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
 .columns {
 	display: flex;
 }
@@ -117,6 +136,28 @@ a {
 	height: 150px;
 	width: 150px;
 	border-radius: 50%;
+	-webkit-box-shadow: 0 0 10px var(--colour-shadow-2);
+    box-shadow: 0 0 10px var(--colour-shadow-2);
+}
+
+.info-links {
+	display: flex;
+	flex-direction: column;
+}
+
+.info-link a {
+	padding: 10px;
+	color: var(--colour-highlight-alt);
+	background-color: var(--colour-background);
+	border-radius: 10px;
+	transition: all 0.3s ease;
+}
+
+.info-link a:hover {
+	color: var(--colour-background);
+	background-color: var(--colour-highlight-alt);
+	-webkit-box-shadow: 0 0 10px var(--colour-shadow);
+    box-shadow: 0 0 10px var(--colour-shadow);
 }
 
 .other-card-2 {
@@ -162,6 +203,11 @@ a {
 	padding: 5px 35px;
 	max-width: 600px;
 	margin: auto;
+}
+
+.skill-descriptor img {
+	height: 50px;
+	margin: 5px;
 }
 
 #language-line {
@@ -241,15 +287,37 @@ footer p {
 		width: 100%;
 	}
 	.info-card {
-		flex-direction: row;
+		flex-direction: column;
 	}
 	.info-card img {
 		margin-right: 10px;
+	}
+	.info-top {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+	.info-links {
+		width: 100%;
+		justify-content: space-evenly;
+		flex-direction: row;
 	}
 	.other-card {
 		display: none;
 	}
 	.other-card-2 {
 		display: block;
+	}
+	.other-content {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		column-gap: 10px;
+	}
+}
+
+@media screen and (max-width: 630px) {
+	.other-content {
+		display: flex;
+		flex-direction: column;
 	}
 }
