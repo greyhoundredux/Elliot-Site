@@ -8,7 +8,7 @@
 	<script src="script.js"></script>
 </head>
 <body id="main">
-	<div id="theme-button" onclick="themeSwitcher()">Theme</div>
+	<div id="theme-button" onClick="themeSwitcher()">Theme</div>
 	<header>
 		<h1>Elliot Danby</h1>
 		<p id="sub">Aspiring Front End Developer</p>
@@ -22,102 +22,112 @@
 	</div>
 	<div class="columns">
 		<div class="left-column">
-			<div class="languages-card">
+			<div id="languages-card">
 				<h2>Languages</h2>
-				<p class="skillsSub">Click for details</p>
-				<div class="skills">
-					<p class="skill" onClick="showDescription('html')">
-						HTML + CSS
-					</p>
-					<p class="skill" onClick="showDescription('javascript')">
-						JavaScript
-					</p>
-					<p class="skill" onClick="showDescription('java')">
-						Java
-					</p>
-					<p class="skill" onClick="showDescription('python')">
-						Python
-					</p>
-					<p class="skill" onClick="showDescription('c')">
-						C
-					</p>
+				<p id="lang-hide-button" class="hide-button" onclick="hideCard('lang-hide')">Hide</p>
+				<p id="lang-show-button" class="show-button" onclick="hideCard('lang-hide')">Show</p>
+				<div id="lang-hide">
+					<p class="skillsSub">Click for details</p>
+					<div class="skills">
+						<p class="skill" onclick="showDescription('html')">HTML + CSS</p>
+						<p class="skill" onclick="showDescription('javascript')">JavaScript</p>
+						<p class="skill" onclick="showDescription('java')">Java</p>
+						<p class="skill" onclick="showDescription('python')">Python</p>
+						<p class="skill" onclick="showDescription('c')">C</p>
+					</div>
+					<div id="html" class="skill-descriptor" style="display: none;">
+						<img src="pics/htmlandcss.png" alt="HTML and CSS logos">
+						<p>I'm entirely self-taught in HTML and CSS. I decided one day to create a website for myself, and after playing around and seeing what simple HTML and CSS was capable of, I became hooked. I love finding new and exciting functionality, and I'd love to learn more and refine my skills in a professional environment.</p>
+					</div>
+					<div id="javascript" class="skill-descriptor" style="display: none;">
+						<img src="pics/js.png" alt="JavaScript logo">
+						<p>After learning the basics of HTML, I quickly learned that in order to create websites with exciting and unique functionality, I'd need to look into JavaScript. I love how meta JavaScript feels, and how there exists infinite possibilities for cool features. I'm excited by the prospect of digging deeper into JavaScript to create webpages bubbling with life and creativity.</p>
+					</div>
+					<div id="java" class="skill-descriptor" style="display: none;">
+						<img src="pics/java.png" alt="Java logo">
+						<p>Coding in Java made up the main body of my Software Engineering module at Bath Uni. We were tasked with creating a game using Java, which we did successfully and acheived a high merit grade. The formal education in Object Oriented Programming has proven to be invaluable for my self taught endeavours.</p>
+					</div>
+					<div id="python" class="skill-descriptor" style="display: none;">
+						<img src="pics/python.png" alt="Python logo">
+						<p>I've used Python at Bath Uni during the Artificial Intelligence module. It was used to write scripts for problem solving, for example I've written one script that solves a sudoku, and another demonstrating the Naive Bayes Classifier.</p>
+					</div>
+					<div id="c" class="skill-descriptor" style="display: none;">
+						<img src="pics/c.png" alt="C logo">
+						<p>I was taught C as my first programming language at Bath Uni. We used it to cover the initial Principles of Programming module, as it makes for a nice entry level language. Again, I achieved a merit in this module.</p>
+					</div>
+					<p id="language-line">...and I'm 100% looking to learn more</p>
 				</div>
-				<div id="html" class="skill-descriptor" style="display: none;">
-					<img src="pics/htmlandcss.png" alt="HTML and CSS logos">
-					<p>I'm entirely self-taught in HTML and CSS. I decided one day to create a website for myself, and after playing around and seeing what simple HTML and CSS was capable of, I became hooked. I love finding new and exciting functionality, and I'd love to learn more and refine my skills in a professional environment.</p>
-				</div>
-				<div id="javascript" class="skill-descriptor" style="display: none;">
-					<img src="pics/js.png" alt="JavaScript logo">
-					<p>After learning the basics of HTML, I quickly learned that in order to create websites with more functionality, I'd need to look into JavaScript. I love how meta JavaScript feels, and how there is infinite possibilities for cool features.</p>
-				</div>
-				<div id="java" class="skill-descriptor" style="display: none;">
-					<img src="pics/java.png" alt="Java logo">
-					<p>Coding in Java made up the main body of my Software Engineering module whilst studying Computer Science at Bath Uni. We were tasked with creating a game using Java, which we did successfully and acheived a high merit grade.</p>
-				</div>
-				<div id="python" class="skill-descriptor" style="display: none;">
-					<img src="pics/python.png" alt="Python logo">
-					<p>I've used Python at Bath Uni during the Artificial Intelligence module. It was used to write scripts for problem solving, for example I've written one script that solves a sudoku, and another demonstrating the Naive Bayes Classifier.</p>
-				</div>
-				<div id="c" class="skill-descriptor" style="display: none;">
-					<img src="pics/c.png" alt="C logo">
-					<p>I was taught C as my first programming language at Bath Uni. We used it to cover the initial Principles of Programming module, as it makes for a nice entry level language. Again, I achieved a merit in this module.</p>
-				</div>
-				<p id="language-line">...and I'm 100% looking to learn more</p>
 			</div>
 			<div class="skills-card">
 				<h2>Skills</h2>
-				<p class="skillsSub">Click for details</p>
-				<div class="skills">
-					<p class="skill" onClick="showDescription('mysql')">
-						MySQL
-					</p>
-					<p class="skill" onClick="showDescription('git')">
-						Git
-					</p>
-					<p class="skill" onClick="showDescription('adobe')">
-						Adobe
-					</p>
-				</div>
-				<div id="mysql" class="skill-descriptor" style="display: none;">
-					<img src="pics/mysql.png" alt="MySql logo">
-					<p>I was assessed on MySql for my Databases module in my Masters. The module included the design of a schema and database in MySql. We also had to create a simple PHP web application that allowed users to populate a database with information. For this module I acheived a distinction.</p>
-				</div>
-				<div id="git" class="skill-descriptor" style="display: none;">
-					<img src="pics/git.png" alt="Git logo">
-					<p>Whilst teaching myself the fundamentals of web development I taught myself the basics of Git from the command line.</p>
-				</div>
-				<div id="adobe" class="skill-descriptor" style="display: none;">
-					<img src="pics/adobe.png" alt="Adobe logo">
-					<p>My usage of Adobe started with my A-Level in Media Studies. Since then I have used <strong>Photoshop</strong>, <strong>Illustrator</strong> and <strong>InDesign</strong> recreationally.</p>
+				<p id="skills-hide-button" class="hide-button" onclick="hideCard('skills-hide')">Hide</p>
+				<p id="skills-show-button" class="show-button" onclick="hideCard('skills-hide')">Show</p>
+				<div id="skills-hide">
+					<p class="skillsSub">Click for details</p>
+					<div class="skills">
+						<p class="skill" onClick="showDescription('mysql')">MySQL</p>
+						<p class="skill" onClick="showDescription('git')">Git</p>
+						<p class="skill" onClick="showDescription('adobe')">Adobe</p>
+					</div>
+					<div id="mysql" class="skill-descriptor" style="display: none;">
+						<img src="pics/mysql.png" alt="MySql logo">
+						<p>I was assessed on MySql for my Databases module in my Masters. The module included the design of a schema and database in MySql. We also had to create a simple PHP web application that allowed users to populate a database with information. For this module I acheived a distinction.</p>
+					</div>
+					<div id="git" class="skill-descriptor" style="display: none;">
+						<img src="pics/git.png" alt="Git logo">
+						<p>Whilst teaching myself the fundamentals of web development I taught myself the basics of Git from the command line.</p>
+					</div>
+					<div id="adobe" class="skill-descriptor" style="display: none;">
+						<img src="pics/adobe.png" alt="Adobe logo">
+						<p>My usage of Adobe started with my A-Level in Media Studies. Since then I have used <strong>Photoshop</strong>, <strong>Illustrator</strong> and <strong>InDesign</strong> recreationally.</p>
+					</div>
 				</div>
 			</div>
 			<div class="education-card">
 				<div id="table-container">
-					<h2>
-						Education
-					</h2>
-					<div class="education-table">
-						<p class="date">
-							Oct 18 - Sep 19
-						</p>
-						<div>
-							<p>
-								<a class="uni" href="https://www.bath.ac.uk/corporate-information/rankings-and-reputation/" target="_blank">The University of Bath</a> | MSc Computer Science
-							</p>
-							<p>
-								Modules Include: Software Engineering, Databases, Interactive Communication Design, Functional Programming
-							</p>
+					<h2>Education</h2>
+					<p id="edu-hide-button" class="hide-button" onclick="hideCard('education-hide')">Hide</p>
+					<p id="edu-show-button" class="show-button" onclick="hideCard('education-hide')">Show</p>
+					<div id="education-hide">
+						<div class="table">
+							<p class="date">Oct 18 - Sep 19</p>
+							<div>
+								<p><a class="uni" href="https://www.bath.ac.uk/corporate-information/rankings-and-reputation/" target="_blank">The University of Bath</a> | MSc Computer Science</p>
+								<p>Modules Include: Software Engineering, Databases, Interactive Communication Design, Functional Programming</p>
+							</div>
+							<p>Sep 15 - Jun 18</p>
+							<div>
+								<p><a class="uni" href="https://www1.chester.ac.uk/about/the-university" target="_blank">The University of Chester</a> | BSc Mathematics, 1<sup>st</sup></p>
+								<p>Modules Include: Linear Algebra, Quality Control, Group Theory, Linear Programming, Statistical Methods, Applied Calculus</p>
+							</div>
 						</div>
-						<p>
-							Sep 15 - Jun 18
-						</p>
-						<div>
-							<p>
-								<a class="uni" href="https://www1.chester.ac.uk/about/the-university" target="_blank">The University of Chester</a> | BSc Mathematics, 1<sup>st</sup>
-							</p>
-							<p>
-								Modules Include: Linear Algebra, Quality Control, Group Theory, Linear Programming, Statistical Methods, Applied Calculus
-							</p>
+					</div>
+				</div>
+			</div>
+			<div class="employment-card">
+				<div id="table-container">
+					<h2>Employment History</h2>
+					<p id="employment-hide-button" class="hide-button" onclick="hideCard('employment-hide')">Hide</p>
+					<p id="employment-show-button" class="show-button" onclick="hideCard('employment-hide')">Show</p>
+					<div id="employment-hide">
+						<div class="table">
+							<p class="date">Oct 18 - Sep 19</p>
+							<div>
+								<p class="employment-title"><span>Retail Assistant</span> | Co-op, Chatham, Kent</p>
+								<p class="employment-info">Worked as part of a successful team of five in a busy Co-op during the COVID-19 pandemic. The day-to-day included reduction and waste of stock, rotation and replenishment of stock, gap checks and front-line customer interaction.</p>
+								<p class="employment-info">Worked independently to self-manage and prioritise tasks. This required me to use my initiative, be organised under pressure and take full responsibility for my section. It was also imperative for me to manage my time responsibly as any and all tasks not completed before closing the store would have repercussions for my colleagues and increase their workload.</p>
+								<p class="employment-info">Trained and advised new members of staff.</p>
+							</div>
+							<p class=>Sep 15 - Jun 18</p>
+							<div>
+								<p class="employment-title"><span>Office Administrator</span> | PFP Wealth, Stow-on-the-Wold, Gloucestershire</p>
+								<p>Worked with a financial adviser as part of her team for a Partner Practice of St. James's Place Wealth Management.</p>
+								<p>I took full accountability for work, and ensured I was happy to have my name on it.</p>
+								<p>I automated laborious tasks using Excel, and successfully converted a 2 hour task in to a task of minutes.</p>
+								<p>The role was client facing, and subsequently honed my ability to be courteous and considerate to each clients individual needs, which were time critical, highly confidential and often clients making important and high-level investments.</p>
+								<p>I handled confidential and personal information in a safe and secure manner.</p>
+								<p>The role cemented the importance of deadlines and effective communication whilst working as part of a time sensitive team.</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -147,6 +157,7 @@
 		<div class="right-column">
 			<div class="info-card">
 				<div class="info-top">
+					<h2>About Me</h2>
 					<img src="pics/elliot.JPG">
 					<div class="info-text">
 						<p>My name is Elliot. I'm a mathematics and computer science graduate, and I'd love to be a front end web developer.</p>
