@@ -9,6 +9,7 @@ function showDescription(obj) {
     else {
         obj.style.display = "block";
         boxClose(obj);
+        obj.classList.add("show");
     }
 }
 
@@ -66,6 +67,7 @@ function hideCard(obj) {
     else {
         obj.style.display = "block";
         changeButton(obj);
+        obj.classList.add("show");
     }
 }
 
@@ -110,4 +112,9 @@ function changeButton(obj) {
             document.getElementById('employment-show-button').style.display = "none";
         }
     }
+}
+
+function hideMaintenance() {
+    var obj=document.getElementById('maintenance');
+    obj.style.display = "none";
 }

@@ -79,7 +79,7 @@ a {
   	font-style: italic;
 }
 
-.maintenance {
+#maintenance {
 	background-color: var(--colour-maintenance);
 	border-top: 6px solid var(--colour-highlight-alt);
 	border-radius: 5px;
@@ -88,12 +88,31 @@ a {
 	padding: 20px;
 	-webkit-box-shadow: 0 0 10px var(--colour-shadow);
 	box-shadow: 0 0 10px var(--colour-shadow);
-	display: none;
 }
 
 .maintenance-title {
 	font-size: 1.2em;
 	font-weight: bold;
+}
+
+#maintenance-button {
+	font-family: Helvetica Neue, Arial;
+	height: 30px;
+	width: 50px;
+	color: var(--font-colour);
+	font-size: 12px;
+	background-color: var(--colour-highlight-alt);
+	border: 1px var(--colour-highlight-alt) solid;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+#maintenance-button:hover {
+	font-size: 14px;
+	border: 1px var(--colour-highlight-alt) solid;
+	-webkit-box-shadow: 0 0 10px var(--colour-shadow);
+    box-shadow: 0 0 10px var(--colour-shadow);
 }
 
 .columns {
@@ -228,11 +247,25 @@ a {
 	padding: 5px 35px;
 	max-width: 600px;
 	margin: auto;
+	justify-content: center;
 }
 
 .skill-descriptor img {
 	height: 50px;
 	margin: 5px;
+}
+
+.show {
+	animation: card-reveal cubic-bezier(0.470, 0.000, 0.745, 0.715) 0.2s forwards;
+}
+
+@keyframes card-reveal {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 #language-line {
