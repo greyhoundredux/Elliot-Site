@@ -17,11 +17,15 @@
 	<script src="script.js"></script>
 </head>
 <body id="main">
+
+	<!-- Theme Button -->
 	<div id="theme-button" onClick="themeSwitcher()">Theme</div>
+
 	<header>
 		<h1>Elliot Danby</h1>
 		<p id="sub">Aspiring Front End Developer</p>
 	</header>
+	<!-- Maintenance -->
 	<div id="maintenance">
 		<p class="maintenance-title">Under Maintenance</p>
 		<div class="maintenance-text">
@@ -30,8 +34,13 @@
 			<button id="maintenance-button" onClick="hideMaintenance()">OK</button>
 		</div>
 	</div>
+
+	<!-- Main Body, split into columns -->
 	<div class="columns">
+
+		<!-- Left Column -->
 		<div class="left-column">
+			<!-- Languages -->
 			<div id="languages-card">
 				<h2>Languages</h2>
 				<p id="lang-hide-button" class="hide-button" onclick="hideCard('lang-hide')">Hide</p>
@@ -68,6 +77,7 @@
 					<p id="language-line">...and I'm 100% looking to learn more</p>
 				</div>
 			</div>
+			<!-- Skills -->
 			<div class="skills-card">
 				<h2>Skills</h2>
 				<p id="skills-hide-button" class="hide-button" onclick="hideCard('skills-hide')">Hide</p>
@@ -93,6 +103,7 @@
 					</div>
 				</div>
 			</div>
+			<!-- Education -->
 			<div class="education-card">
 				<div id="table-container">
 					<h2>Education</h2>
@@ -114,6 +125,7 @@
 					</div>
 				</div>
 			</div>
+			<!-- Employment -->
 			<div class="employment-card">
 				<div id="table-container">
 					<h2>Employment History</h2>
@@ -142,6 +154,7 @@
 					</div>
 				</div>
 			</div>
+			<!-- Other Skills and Interests (Mobile Version) -->
 			<div class="other-card-2">
 				<h2>Other Skills and Interests</h2>
 				<div class="other-content">
@@ -164,7 +177,10 @@
 				</div>
 			</div>
 		</div>
+
+		<!--- Right Column -->
 		<div class="right-column">
+			<!-- About Me -->
 			<div class="info-card">
 				<div class="info-top">
 					<h2>About Me</h2>
@@ -185,6 +201,7 @@
 					</div>
 				</div>
 			</div>
+			<!-- Other Skills and Interests (Browser Version) -->
 			<div class="other-card">
 				<h2>Other Skills and Interests</h2>
 				<div class="other-item">
@@ -206,9 +223,71 @@
 			</div>
 		</div>
 	</div>
+	<!-- Portfolio -->
+	<div class="portfolio-wrap">
+		<!-- Wave -->
+		<svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path d="M0,160L48,181.3C96,203,192,245,288,250.7C384,256,480,224,576,192C672,160,768,128,864,112C960,96,1056,96,1152,106.7C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+		<!-- Portfolio Body, defines the big old blue area under svg -->
+		<div class="portfolio-body">
+			<div class="portfolio-content">
+				<h2>Some of my Recent Work</h2>
+				<div class="portfolio-section-wrap">
+					<div class="portfolio-section">
+						<div class="thumbnail thumb1">
+							<div class="overlay">
+								<div class="overlay-text">
+									<h3>CRD Bespoke Gates</h3>
+									<p>Web Design and Development project for a Cotswold based gate manufacturer.</p>
+									<p>The client was tired of insipid web templates, and wanted something more bespoke to his company.</p>
+								</div>
+							</div>
+						</div>
+						<div class="buttons">
+							<a href="#" target="_blank">GitHub</a>
+							<a href="#" target="_blank">Live</a>
+						</div>
+					</div>
+					<div class="portfolio-section">
+						<div class="thumbnail thumb2">
+							<div class="overlay">
+								<div class="overlay-text">
+									<h3>JE Windows</h3>
+									<p>Web Design and Development project for a local window cleaning company.</p>
+									<p>The target here was to create a website that brought the client into the modern world.</p>
+								</div>
+							</div>
+						</div>
+						<div class="buttons">
+							<a href="#" target="_blank">GitHub</a>
+							<a href="#" target="_blank">Live</a>
+						</div>
+					</div>
+					<div class="portfolio-section">
+						<div class="thumbnail thumb3">
+							<div class="overlay">
+								<div class="overlay-text">
+									<h3>Andy Coventry Photography</h3>
+									<p>Web Design and Development project for a village photographer.</p>
+									<p>The client wanted a simple site that would enable him to showcase his photography to the world, rather that using his local newsagents.</p>
+								</div>
+							</div>
+						</div>
+						<div class="buttons">
+							<a href="#" target="_blank">GitHub</a>
+							<a href="#" target="_blank">Live</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<footer>
-		<p><strong>Thank you for taking a look at my site</strong></p>
-		<p><a id="email" href="mailto:e.danby@outlook.com">Send me an email</a></p>
+		<!-- Footer Wave, will add when needed. -->
+		<svg class="footer-wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path d="M0,160L120,144C240,128,480,96,720,101.3C960,107,1200,149,1320,170.7L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
+		<div class="footer-content">
+			<p><strong>Thank you for taking a look at my site</strong></p>
+			<p><a id="email" href="mailto:e.danby@outlook.com">Send me an email</a></p>
+		</div>
 	</footer>
 </body>
 </html>
