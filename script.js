@@ -2,69 +2,89 @@ function themeSwitcher() {
     document.body.classList.toggle("dark-theme");
 }
 
+// Iterates through descriptions and closes them all, then opens the relevant description. This way is janky.
 function showDescription(obj) {
-    var obj=document.getElementById(obj);
-    if (obj.style.display == "block")
-        obj.style.display = "none";
-    else {
-        obj.style.display = "block";
-        boxClose(obj);
-        obj.classList.add("show");
+    var description = document.getElementById(obj);
+    var descriptions = document.querySelectorAll(".skill-descriptor");
+
+    if (description.style.display == "block") {
+        description.style.display = "none";
+    } else {
+        for (i = 0; i < descriptions.length; i++) {
+            descriptions[i].style.display = "none";
+        }
+        description.style.display = "block";
+        description.classList.add("show");
     }
 }
 
-function boxClose(obj) {
-    if (obj == document.getElementById('html')) {
-        document.getElementById('javascript').style.display = "none";
-        document.getElementById('java').style.display = "none";
-        document.getElementById('python').style.display = "none";
-        document.getElementById('c').style.display = "none";
-    }
-    if (obj == document.getElementById('javascript')) {
-        document.getElementById('html').style.display = "none";
-        document.getElementById('java').style.display = "none";
-        document.getElementById('python').style.display = "none";
-        document.getElementById('c').style.display = "none";
-    }
-    if (obj == document.getElementById('java')) {
-        document.getElementById('html').style.display = "none";
-        document.getElementById('javascript').style.display = "none";
-        document.getElementById('python').style.display = "none";
-        document.getElementById('c').style.display = "none";
-    }
-    if (obj == document.getElementById('python')) {
-        document.getElementById('html').style.display = "none";
-        document.getElementById('javascript').style.display = "none";
-        document.getElementById('java').style.display = "none";
-        document.getElementById('c').style.display = "none";
-    }
-    if (obj == document.getElementById('c')) {
-        document.getElementById('html').style.display = "none";
-        document.getElementById('javascript').style.display = "none";
-        document.getElementById('java').style.display = "none";
-        document.getElementById('python').style.display = "none";
-    }
-    if (obj == document.getElementById('mysql')) {
-        document.getElementById('git').style.display = "none";
-        document.getElementById('adobe').style.display = "none";
-        document.getElementById('seo').style.display = "none";
-    }
-    if (obj == document.getElementById('git')) {
-        document.getElementById('mysql').style.display = "none";
-        document.getElementById('adobe').style.display = "none";
-        document.getElementById('seo').style.display = "none";
-    }
-    if (obj == document.getElementById('adobe')) {
-        document.getElementById('mysql').style.display = "none";
-        document.getElementById('git').style.display = "none";
-        document.getElementById('seo').style.display = "none";
-    }
-    if (obj == document.getElementById('seo')) {
-        document.getElementById('mysql').style.display = "none";
-        document.getElementById('git').style.display = "none";
-        document.getElementById('adobe').style.display = "none";
-    }
-}
+// function showDescription(obj) {
+//     var obj = document.getElementById(obj);
+//     if (obj.style.display == "block")
+//         obj.style.display = "none";
+//     else {
+//         obj.style.display = "block";
+//         boxClose(obj);
+//         obj.classList.add("show");
+//     }
+// }
+
+// function boxClose(obj) {
+//     console.log(obj);
+// }
+
+// function boxClose(obj) {
+//     if (obj == document.getElementById('html')) {
+//         document.getElementById('javascript').style.display = "none";
+//         document.getElementById('java').style.display = "none";
+//         document.getElementById('python').style.display = "none";
+//         document.getElementById('c').style.display = "none";
+//     }
+//     if (obj == document.getElementById('javascript')) {
+//         document.getElementById('html').style.display = "none";
+//         document.getElementById('java').style.display = "none";
+//         document.getElementById('python').style.display = "none";
+//         document.getElementById('c').style.display = "none";
+//     }
+//     if (obj == document.getElementById('java')) {
+//         document.getElementById('html').style.display = "none";
+//         document.getElementById('javascript').style.display = "none";
+//         document.getElementById('python').style.display = "none";
+//         document.getElementById('c').style.display = "none";
+//     }
+//     if (obj == document.getElementById('python')) {
+//         document.getElementById('html').style.display = "none";
+//         document.getElementById('javascript').style.display = "none";
+//         document.getElementById('java').style.display = "none";
+//         document.getElementById('c').style.display = "none";
+//     }
+//     if (obj == document.getElementById('c')) {
+//         document.getElementById('html').style.display = "none";
+//         document.getElementById('javascript').style.display = "none";
+//         document.getElementById('java').style.display = "none";
+//         document.getElementById('python').style.display = "none";
+//     }
+//     if (obj == document.getElementById('mysql')) {
+//         document.getElementById('git').style.display = "none";
+//         document.getElementById('adobe').style.display = "none";
+//         document.getElementById('seo').style.display = "none";
+//     }
+//     if (obj == document.getElementById('git')) {
+//         document.getElementById('mysql').style.display = "none";
+//         document.getElementById('adobe').style.display = "none";
+//         document.getElementById('seo').style.display = "none";
+//     }
+//     if (obj == document.getElementById('adobe')) {
+//         document.getElementById('mysql').style.display = "none";
+//         document.getElementById('git').style.display = "none";
+//         document.getElementById('seo').style.display = "none";
+//     }
+//     if (obj == document.getElementById('seo')) {
+//         document.getElementById('mysql').style.display = "none";
+//         document.getElementById('git').style.display = "none";
+//         document.getElementById('adobe').style.display = "none";
+//     }
+// }
 
 function hideCard(obj) {
     var obj=document.getElementById(obj);
@@ -77,8 +97,9 @@ function hideCard(obj) {
         changeButton(obj);
         obj.classList.add("show");
     }
-}
+} 
 
+// Changes 'Hide' to 'Show' and vice versa, yes its horrible to look at, yes it needs changing.
 function changeButton(obj) {
     if (obj == document.getElementById('lang-hide')) {
         if (document.getElementById('lang-hide-button').style.display !== "none") {

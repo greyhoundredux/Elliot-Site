@@ -218,7 +218,8 @@ header {
 	margin: 20px auto 10px auto;
 	max-width: 700px;
 }
-.skill {
+.skill,
+.language-button {
 	margin: 0 auto 10px auto;
 	padding: 5px;
 	width: 120px;
@@ -229,12 +230,16 @@ header {
 	transition: 0.3s;
 	cursor: pointer;
 }
-.skill:hover {
+.skill:hover,
+.language-button:hover {
 	width: 130px;
 	color: var(--colour-background);
 	background-color: var(--colour-highlight);
 	-webkit-box-shadow: 0 0 10px var(--colour-shadow);
     box-shadow: 0 0 10px var(--colour-shadow);
+}
+.visible-card {
+	display: block;
 }
 .skill-descriptor {
 	background-color: var(--colour-secondary);
