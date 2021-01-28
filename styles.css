@@ -311,12 +311,16 @@ sup {
 .portfolio-body {
 	width: 100%;
 	margin-top: -60px;
-	padding-bottom: 140px;
+	padding-bottom: 180px;
 	background-color: var(--colour-highlight);
 }
 .portfolio-body h2 {
 	font-size: 2.2em;
 	color: var(--colour-background);
+}
+.portfolio-body .header-sub {
+	color: var(--colour-background);
+	font-style: italic;
 }
 .portfolio-section-wrap {
 	width: 80%;
@@ -383,18 +387,20 @@ sup {
 }
 .portfolio-section .buttons a {
 	flex: 1;
-	margin: 5%;
-	padding: 10px;
+	margin: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	border-radius: 10px;
 	transition: all 0.3s ease;
-	color: var(--colour-highlight);
-	background-color: var(--colour-background);
-	border: 1px var(--colour-highlight) solid;
-}
-.portfolio-section .buttons a:hover {
 	color: var(--colour-background);
 	background-color: var(--colour-highlight);
 	border: 1px var(--colour-background) solid;
+}
+.portfolio-section .buttons a:hover {
+	color: var(--colour-highlight);
+	background-color: var(--colour-background);
+	border: 1px var(--colour-highlight) solid;
 	-webkit-box-shadow: 0 0 10px var(--colour-shadow);
     box-shadow: 0 0 10px var(--colour-shadow);
 }
@@ -402,16 +408,13 @@ sup {
 
 
 /* FOOTER */
-footer {
-	margin-top: -175px;
-}
 .footer-wave {
 	width: 100%;
 	fill: var(--colour-background);
 }
 .footer-content {
 	font-style: bold;
-	margin: -120px auto 60px auto;
+	margin: 80px auto 60px auto;
 }
 footer p {
 	margin: 30px;
@@ -482,18 +485,13 @@ footer p {
 	}
 }
 
-@media screen and (max-width: 800px) {
-	footer {
-		margin-top: -100px;
-	}
-	.footer-content {
-		margin-top: -20px;
-	}
-}
-
 @media screen and (max-width: 630px) {
 	header {
 		padding-right: 10px;
+	}
+	#maintenance {
+		margin-left: 20px;
+		margin-right: 20px;
 	}
 	.columns {
 		margin: 0 10px;

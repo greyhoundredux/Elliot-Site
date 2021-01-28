@@ -47,14 +47,22 @@ function boxClose(obj) {
     if (obj == document.getElementById('mysql')) {
         document.getElementById('git').style.display = "none";
         document.getElementById('adobe').style.display = "none";
+        document.getElementById('seo').style.display = "none";
     }
     if (obj == document.getElementById('git')) {
         document.getElementById('mysql').style.display = "none";
         document.getElementById('adobe').style.display = "none";
+        document.getElementById('seo').style.display = "none";
     }
     if (obj == document.getElementById('adobe')) {
         document.getElementById('mysql').style.display = "none";
         document.getElementById('git').style.display = "none";
+        document.getElementById('seo').style.display = "none";
+    }
+    if (obj == document.getElementById('seo')) {
+        document.getElementById('mysql').style.display = "none";
+        document.getElementById('git').style.display = "none";
+        document.getElementById('adobe').style.display = "none";
     }
 }
 
@@ -110,6 +118,26 @@ function changeButton(obj) {
         else {
             document.getElementById('employment-hide-button').style.display = "block";
             document.getElementById('employment-show-button').style.display = "none";
+        }
+    }
+    if (obj == document.getElementById('about-hide')) {
+        if (document.getElementById('about-hide-button').style.display !== "none") {
+            document.getElementById('about-hide-button').style.display = "none";
+            document.getElementById('about-show-button').style.display = "block";
+        }
+        else {
+            document.getElementById('about-hide-button').style.display = "block";
+            document.getElementById('about-show-button').style.display = "none";
+        }
+    }
+    if (obj == document.getElementById('other-hide')) {
+        if (document.getElementById('other-hide-button').style.display !== "none") {
+            document.getElementById('other-hide-button').style.display = "none";
+            document.getElementById('other-show-button').style.display = "block";
+        }
+        else {
+            document.getElementById('other-hide-button').style.display = "block";
+            document.getElementById('other-show-button').style.display = "none";
         }
     }
 }
